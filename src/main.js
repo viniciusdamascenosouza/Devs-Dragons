@@ -28,5 +28,4 @@ BlazeDraco.vida = 10;
 BlazeDraco.mana = 10;
 BlazeDraco.level = 100;
 BlazeDraco.tipo = "Mago";
-
 console.log(BlazeDraco);
