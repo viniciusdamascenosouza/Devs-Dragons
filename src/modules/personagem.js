@@ -5,6 +5,14 @@ export class Personagem {
   level;
   tipo;
 
+  constructor(nome, vida, mana, level, tipo) {
+    this.nome = nome;
+    this.vida = vida;
+    this.mana = mana;
+    this.level = level;
+    this.tipo = tipo;
+  }
+
   obterInsignia() {
     if (this.level >= 50) {
       return `${this.tipo} Raro`;

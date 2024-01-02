@@ -1,7 +1,6 @@
 ﻿# Devs-Dragons
  ## Curso realizado na plataforma Alura, com foco em classes e heranças no desenvolvimento de aplicações com orientação a objetos
 
-Claro, vou atribuir aleatoriamente valores de vida, mana, level e classe para os 52 personagens de dragão. Aqui está a lista:
 
 <!-- 1. BlazeDraco - Vida: 8, Mana: 5, Level: 62, Classe: Mago
 2. ShadowWing - Vida: 6, Mana: 8, Level: 45, Classe: Ladino
