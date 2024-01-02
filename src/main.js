@@ -1,21 +1,5 @@
 import { Personagem } from "./modules/personagem.js";
 
-const personagemPedrinho = {
-  nome: "Pedrinho",
-  vida: 7,
-  mana: 12,
-  level: 5,
-  tipo: "Mago",
-};
-
-const personagemJose = {
-  nome: "Jose",
-  vida: 7,
-  mana: 6,
-  level: 3,
-  tipo: "Arqueiro",
-};
-
 const BlazeDraco = new Personagem();
 BlazeDraco.nome = "BlazeDraco";
 BlazeDraco.vida = 10;
@@ -23,4 +7,12 @@ BlazeDraco.mana = 10;
 BlazeDraco.level = 100;
 BlazeDraco.tipo = "Mago";
 
-console.log(BlazeDraco);
+const ShadowWing = new Personagem();
+ShadowWing.nome = "ShadowWing";
+ShadowWing.vida = 10;
+ShadowWing.mana = 10;
+ShadowWing.level = 100;
+ShadowWing.tipo = "Ladino";
+
+console.log(`Insígnia de ${ShadowWing.nome}: ${ShadowWing.obterInsignia()}`);
+console.log(`Insígnia de ${BlazeDraco.nome}: ${BlazeDraco.obterInsignia()}`);
