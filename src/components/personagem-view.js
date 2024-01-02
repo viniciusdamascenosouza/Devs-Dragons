@@ -49,8 +49,8 @@ personagens
             <img src="./src/assets/img/icone-mana.png" class="icone-mana">
             <p class="insignia">${personagem.obterInsignia()}</p>
             <img src="./src/assets/img/icone-vida.png" class="icone-vida">
-            <h4 class="mana"></h4>
-            <h4 class="vida"></h4>
+            <h4 class="mana">${personagem.mana}</h4>
+            <h4 class="vida">${personagem.vida}</h4>
         </div>
         `;
 

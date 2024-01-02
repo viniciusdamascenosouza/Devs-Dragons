@@ -6,6 +6,3 @@ const ShadowWing = new Personagem("ShadowWing", 10, 10, 100, "Arqueiro");
 
 const personagens = [BlazeDraco, ShadowWing];
 new personagemView(personagens).render();
-
-console.log(BlazeDraco);
-console.log(ShadowWing);
