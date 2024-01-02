@@ -15,9 +15,9 @@ export class Personagem {
 
   obterInsignia() {
     if (this.level >= 50) {
-      return `${this.tipo} Raro`;
+      return `Raro`;
     }
-    return `${this.tipo} Aprendiz`;
+    return `Aprendiz`;
   }
 }
 

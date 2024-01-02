@@ -1,4 +1,11 @@
 export class personagemView {
+
+personagens
+    constructor(personagens) {
+        this.ulPersonagens = document.querySelector("ul#personagens");
+        this.personagens = personagens;
+    }
+
   render() {
     this.ulPersonagens.innerHTML = "";
     this.personagens.forEach((personagem) => {
@@ -9,7 +16,7 @@ export class personagemView {
 
   criaPersonagem = (personagem) => {
     const personagemLI = document.createElement("li");
-    personagemLI.classList.add("personagem");
+    personagemLI.classList.add("personagem", personagem.tipo);
 
     //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array
 
@@ -21,18 +28,18 @@ export class personagemView {
                 <div class="combate"></div>
                 <div class="level">
                     <button class="diminuir-level">-</button>
-                    <p class="level-texto">Level </p>
+                    <p class="level-texto">Level ${personagem.level}</p>
                     <button class="aumentar-level">+</button>
                 </div>
             </div>
             <div class="container-imagem">
                 <div class="imagem"></div>
                 <div class="container-tipo">
-                    <h2 class="tipo"></h2>
+                    <h2 class="tipo">${personagem.tipo}</h2>
                 </div>
             </div>
             <div class="container-nome">
-                <h3 class="nome"></h3>
+                <h3 class="nome">${personagem.nome}</h3>
             </div>
             <div class="container-descricao">
                 <p class="descricao"></p>
@@ -40,7 +47,7 @@ export class personagemView {
         </div>
         <div class="container-inferior">
             <img src="./src/assets/img/icone-mana.png" class="icone-mana">
-            <p class="insignia"></p>
+            <p class="insignia">${personagem.obterInsignia()}</p>
             <img src="./src/assets/img/icone-vida.png" class="icone-vida">
             <h4 class="mana"></h4>
             <h4 class="vida"></h4>
