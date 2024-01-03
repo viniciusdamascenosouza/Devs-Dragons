@@ -1,21 +1,22 @@
 export class Personagem {
-  nome;
-  vida = 100;
-  mana = 100;
-  level;
-  tipo;
-  descricao;
+  nome
+  vida = 100
+  mana = 100
+  level
+  tipo
+  descricao
 
-  constructor(nome, level) {
-    this.nome = nome;
-    this.level = level;
+  constructor(nome, level, tipo) {
+      this.nome = nome
+      this.level = level
+      this.tipo = tipo
   }
 
   obterInsignia() {
-    if (this.level >= 50) {
-      return `Implacavel ${this.tipo}`;
-    }
-    return `${this.tipo} iniciante`;
+      if (this.level >= 5){
+          return `Implacavel ${this.tipo}`
+      }
+      return `${this.tipo} iniciante`
   }
 }
 
