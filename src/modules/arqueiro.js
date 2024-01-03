@@ -5,6 +5,7 @@ export class Arqueiro extends Personagem {
   agilidade;
   vigilancia;
   static tipo = "Arqueiro";
+  static descricao = 'Você tem o meu arco!';
 
   constructor(nome, level, destreza, agilidade, vigilancia) {
     super(nome, level);
