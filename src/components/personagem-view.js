@@ -16,7 +16,7 @@ personagens
 
   criaPersonagem = (personagem) => {
     const personagemLI = document.createElement("li");
-    personagemLI.classList.add("personagem", personagem.tipo);
+    personagemLI.classList.add("personagem", personagem.constructor.tipo);
 
     //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array
 
@@ -35,7 +35,7 @@ personagens
             <div class="container-imagem">
                 <div class="imagem"></div>
                 <div class="container-tipo">
-                    <h2 class="tipo">${personagem.tipo}</h2>
+                    <h2 class="tipo">${personagem.constructor.tipo}</h2>
                 </div>
             </div>
             <div class="container-nome">
