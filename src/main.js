@@ -12,9 +12,19 @@ const ShadowWing = new Mago("ShadowWing", 45, "Gelo", 10, 10);
 const ThunderTail = new Arqueiro("ThunderTail", 60, 8, 7, 9);
 
 // arqueiros magos
-const CelestialChaos = new ArqueiroMago("CelestialChaos", 87, 8, 7, 7, "Raio", 10, 8 )
+const CelestialChaos = new ArqueiroMago(
+  "CelestialChaos",
+  87,
+  8,
+  7,
+  7,
+  "Raio",
+  10,
+  8
+);
 
 const personagens = [BlazeDraco, ShadowWing, ThunderTail, CelestialChaos];
 new personagemView(personagens).render();
 
-console.log(Personagem.verificarVencedor(ThunderTail, BlazeDraco))
+console.log(Personagem.verificarVencedor(ThunderTail, BlazeDraco));
+console.log(ThunderTail);
