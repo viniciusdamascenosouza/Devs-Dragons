@@ -6,17 +6,35 @@ export class Personagem {
   tipo;
   descricao;
 
-  constructor(nome, level, tipo) {
+  constructor(nome) {
     this.nome = nome;
-    this.#level = level;
-    // this.tipo = tipo;
+    this.#level = 1;
+  }
+
+  aumentarLevel() {
+    this.#level += 1;
+  }
+
+  diminuirLevel() {
+    this.level -= 1;
+  }
+
+  get level() {
+    return this.#level;
+  }
+
+  set level(novoLevel) {
+    if (novoLevel >= 1) {
+      this.#level = novoLevel;
+    }
   }
 
   obterInsignia() {
-    if (this.#level >= 50) {
+    if (this.#level >= 5 && this.#level >= 10) {
       return `Implacavel ${this.constructor.tipo}`;
-    }
-    return `${this.constructor.tipo} iniciante`;
+    } if (this.#level >= 10) {
+      return `Lendário`;
+    } else return `${this.constructor.tipo} iniciante`;
   }
 
   static verificarVencedor(personagem1, personagem2) {

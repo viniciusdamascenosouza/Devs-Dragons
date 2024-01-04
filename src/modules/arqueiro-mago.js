@@ -6,11 +6,10 @@ export class ArqueiroMago extends Personagem {
   ladoArqueiro;
   ladoMago;
   static tipo = "ArqueiroMago";
-  static descricao = 'Detentor de lancas e flechas mágicas!';
+  static descricao = "Detentor de lancas e flechas mágicas!";
 
   constructor(
     nome,
-    level,
     destreza,
     agilidade,
     vigilancia,
@@ -18,12 +17,18 @@ export class ArqueiroMago extends Personagem {
     levelMagico,
     inteligencia
   ) {
-    super(nome, level);
+    super(nome);
     this.ladoArqueiro = new Arqueiro(destreza, agilidade, vigilancia);
     this.ladoMago = new Mago(elementoMagico, levelMagico, inteligencia);
   }
 
   obterInsignia() {
-    return `${this.ladoArqueiro.obterInsignia()} e ${this.ladoMago.obterInsignia()}`;
+    if(this.level >= 5 && this.level <= 10) {
+      return `Dominador de flechas e Mestre Mago`;
+    } if(this.level >= 10){
+      return `Lendário Dominador de flechas e Mestre Mago`
+    } else {
+      return `${this.ladoArqueiro.obterInsignia()} e ${this.ladoMago.obterInsignia()}`
+    }
   }
 }

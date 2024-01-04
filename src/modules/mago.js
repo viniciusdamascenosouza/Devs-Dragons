@@ -5,18 +5,20 @@ export class Mago extends Personagem {
   levelMagico;
   inteligencia;
   static tipo = "Mago";
-  static descricao = 'O mago é implacável!';
+  static descricao = "O mago é implacável!";
 
-  constructor(nome, level, elementoMagico, levelMagico, inteligencia) {
-    super(nome, level);
+  constructor(nome, elementoMagico, levelMagico, inteligencia) {
+    super(nome);
     this.elementoMagico = elementoMagico;
     this.levelMagico = levelMagico;
     this.inteligencia = inteligencia;
   }
 
   obterInsignia() {
-    if (this.levelMagico >= 5 && this.inteligencia >= 5) {
+    if (this.level >= 5 && this.level <= 10) {
       return `Mestre do ${this.elementoMagico}`;
+    } if (this.level >= 10){
+      return `Lendário Mestre do ${this.elementoMagico}`
     }
     return super.obterInsignia();
   }

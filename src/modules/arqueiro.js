@@ -5,19 +5,21 @@ export class Arqueiro extends Personagem {
   agilidade;
   vigilancia;
   static tipo = "Arqueiro";
-  static descricao = 'Você tem o meu arco!';
+  static descricao = "Você tem o meu arco!";
 
-  constructor(nome, level, destreza, agilidade, vigilancia) {
-    super(nome, level);
+  constructor(nome, destreza, agilidade, vigilancia) {
+    super(nome);
     this.destreza = destreza;
     this.agilidade = agilidade;
     this.vigilancia = vigilancia;
   }
 
   obterInsignia() {
-    if (this.destreza >= 5) {
+    if (this.level >= 5 && this.level <= 10) {
       return `Dominador de flechas`;
+    } if(this.level >= 10){
+      return `Arqueiro Lendário`
     }
-    return super.obterInsignia();
+    else return super.obterInsignia();
   }
 }

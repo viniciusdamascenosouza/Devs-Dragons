@@ -24,9 +24,10 @@ export class personagemView {
     const personagemLI = document.createElement("li");
     personagemLI.classList.add("personagem", personagem.constructor.tipo);
 
-    const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array
+    const estaSelecionado =
+      this.personagensSelecionados.indexOf(personagem) !== -1; //sintaxe para quando encontra no array
 
-    if (estaSelecionado) personagemLI.classList.add('selecionado')
+    if (estaSelecionado) personagemLI.classList.add("selecionado");
 
     personagemLI.innerHTML = `
         <div class="container-superior">
@@ -60,16 +61,18 @@ export class personagemView {
         </div>
         `;
 
-    /*const containerLevel = personagemLI.querySelector('.level')
-        containerLevel.onclick = (evt) => {
-            evt.stopPropagation()
-    
-            if (evt.target.classList.contains('diminuir-level')) personagem.diminuirLevel()
-    
-            if (evt.target.classList.contains('aumentar-level')) personagem.aumentarLevel()
-    
-            this.render()
-        }*/
+    const containerLevel = personagemLI.querySelector(".level");
+    containerLevel.onclick = (evt) => {
+      evt.stopPropagation();
+
+      if (evt.target.classList.contains("diminuir-level"))
+        personagem.diminuirLevel();
+
+      if (evt.target.classList.contains("aumentar-level"))
+        personagem.aumentarLevel();
+
+      this.render();
+    };
 
     personagemLI.onclick = () => {
       const jaTem2Selecionados = this.personagensSelecionados.length === 2;
